@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Calendar, Gauge, Battery, Zap, Users, Phone } from 'lucide-react'
+import { Gauge, Battery, Zap, Users, Phone } from 'lucide-react'
 
 export interface Tesla {
   id: number

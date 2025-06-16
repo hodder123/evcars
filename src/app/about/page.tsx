@@ -88,7 +88,7 @@ const AboutPage = () => {
                 <p>
                   What started as a small operation has grown into the most trusted Tesla 
                   service provider in the interior of BC. Our team combines deep automotive expertise 
-                  with specialized knowledge of Tesla's revolutionary technology.
+                  with specialized knowledge of Tesla&apos;s revolutionary technology.
                 </p>
                 <p>
                   We are not just selling cars - we are helping our community transition to 
@@ -109,7 +109,7 @@ const AboutPage = () => {
                 </p>
                 <p>
                   We believe that every customer deserves transparency, expertise, and 
-                  exceptional service when making one of life's most important purchases. 
+                  exceptional service when making one of life&apos;s most important purchases. 
                   Our mission extends beyond sales to include education, support, and 
                   building a community of Tesla enthusiasts.
                 </p>

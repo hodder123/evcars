@@ -15,23 +15,25 @@ const exo2 = Exo_2({
 })
 
 export const metadata: Metadata = {
-  title: 'EVStore - Premium Tesla Dealership | Kamloops, BC',
+  title: 'EVStore - Premium Pre-Owned Teslas | Kamloops, BC',
   description: 'Premium pre-owned Tesla vehicles in Kamloops, BC. Tesla Model S, 3, X, Y available. Tesla service, parts & nationwide delivery across Canada.',
   keywords: 'Tesla dealership Kamloops, used Tesla BC, Tesla Model S 3 X Y, Tesla service Kamloops, Tesla parts Canada, electric vehicles BC',
+  icons: {
+    icon: '/tesla.png',
+  },
   openGraph: {
-    title: 'EVStore - Premium Tesla Dealership | Kamloops, BC',
+    title: 'EVStore - Premium Pre-Owned Teslas | Kamloops, BC',
     description: 'Premium pre-owned Tesla vehicles. Tesla service & parts. Nationwide delivery across Canada.',
-    url: 'https://evstore.ca',
-    siteName: 'EVStore',
+    url: 'https://theevstore.ca',
+    siteName: 'theEVStore',
     locale: 'en_CA',
     type: 'website',
   },
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://evstore.ca'
+    canonical: 'https://theevstore.ca'
   }
 }
-
 export default function RootLayout({
   children,
 }: {
