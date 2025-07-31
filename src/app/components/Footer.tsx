@@ -18,7 +18,7 @@ const Footer = () => {
               </div>
               <div>
                 <span className="text-2xl font-cyber font-black text-white">EVStore</span>
-                <div className="text-sm text-cyan-400">Premium Tesla Dealership</div>
+                <div className="text-sm text-cyan-400">Pre-Owned Tesla&apos;s for sale</div>
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
@@ -69,12 +69,7 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
-              <li>
-                <Link href="/financing" className="text-gray-300 hover:text-cyan-400 transition-colors">
-                  Financing
-                </Link>
-              </li>
-            </ul>
+                         </ul>
           </div>
 
           {/* Services */}
