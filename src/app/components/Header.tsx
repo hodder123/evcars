@@ -72,7 +72,7 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
               className="flex items-center space-x-2 px-5 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-400/50 rounded-full transition-all duration-300 group"
             >
               <Phone className="w-4 h-4 text-cyan-400" />
-              <span className="text-white font-medium text-lg">250-828-8760</span>
+              <span className="text-white font-medium text-lg">250-828-8761</span>
             </a>
 
             {/* Get Quote Button */}
@@ -132,7 +132,7 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <div>
                   <div className="text-white font-medium text-lg">Call Now</div>
-                  <div className="text-gray-400">250-828-8760</div>
+                  <div className="text-gray-400">250-828-8761</div>
                 </div>
               </a>
               

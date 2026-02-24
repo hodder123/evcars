@@ -185,7 +185,7 @@ const AboutPage = () => {
                   className="flex items-center justify-center space-x-3 w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-black font-bold py-4 px-6 rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Call: 250-828-8760</span>
+                  <span>Call: 250-828-8761</span>
                 </a>
                 
                 <button

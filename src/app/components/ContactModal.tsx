@@ -34,7 +34,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   href="tel:2508288760" 
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
-                  250-828-8760
+                  250-828-8761
                 </a>
               </div>
             </div>
