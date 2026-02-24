@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://theevstore.ca/sitemap.xml
+
+# Disallow admin or private areas
+Disallow: /admin/
+Disallow: /api/
