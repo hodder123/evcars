@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     canonical: 'https://theevstore.ca'
   },
   verification: {
-    google: 'REPLACE_WITH_YOUR_GSC_CODE',
+    google: 'LuRseNzQqfqak0m-8EGC2x4hrJn6YVnOjDQocDyzbsk',
   },
 }
 
