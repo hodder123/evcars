@@ -67,7 +67,7 @@ export default function RootLayout({
               ],
               "description": "The EV Store specializes in pre-owned Tesla vehicles in Kamloops. Quality inspected, competitive pricing. Model 3, Y, S, X available. Call (250) 828-8761.",
               "telephone": "+12508288761",
-              "email": "info@theevstore.ca",
+              "email": "theevstore.ca@gmail.com",
               "priceRange": "$$$$",
               "address": {
                 "@type": "PostalAddress",
