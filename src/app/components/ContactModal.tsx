@@ -44,11 +44,10 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
               <div>
                 <p className="font-bold text-white">Email</p>
                 <a 
-                  href="mailto:info@evstore.ca" 
+                  href="mailto:theevstore.ca@gmail.com" 
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
-                  info@evstore.ca
-                </a>
+                  theevstore.ca@gmail.com                </a>
               </div>
             </div>
             
