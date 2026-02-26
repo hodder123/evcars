@@ -56,8 +56,8 @@ export default function AboutPage() {
                   <Mail className="w-5 h-5 text-cyan-400 mt-1" />
                   <div>
                     <p className="text-white font-medium">Email</p>
-                    <a href="mailto:theevstore@gmail.com" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                      theevstore@gmail.com
+                    <a href="mailto:theevstore.ca@gmail.com" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                      theevstore.ca@gmail.com
                     </a>
                   </div>
                 </div>

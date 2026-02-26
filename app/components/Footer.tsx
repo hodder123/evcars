@@ -22,9 +22,9 @@ export default function Footer() {
                 <Phone className="w-4 h-4" />
                 <span>250-828-8761</span>
               </a>
-              <a href="mailto:theevstore@gmail.com" className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors">
+              <a href="mailto:theevstore.ca@gmail.com" className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors">
                 <Mail className="w-4 h-4" />
-                <span>theevstore@gmail.com</span>
+                <span>theevstore.ca@gmail.com</span>
               </a>
               <div className="flex items-start space-x-2 text-gray-300">
                 <MapPin className="w-4 h-4 mt-1" />
