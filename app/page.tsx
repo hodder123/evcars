@@ -1,168 +1,214 @@
-'use client'
-
-import { useState, useMemo } from 'react'
-import { Zap, Star } from 'lucide-react'
+import Link from 'next/link'
 import Header from './components/Header'
-import FilterBar from './components/FilterBar'
-import TeslaCard from './components/TeslaCard'
 import Footer from './components/Footer'
-import ContactModal from './components/ContactModal'
-import { getBasicTeslas } from './lib/teslaData'
+import { Zap, Battery, Wrench, Phone, ChevronRight, Shield, Truck } from 'lucide-react'
+import { allTeslas } from './lib/teslaData'
+import Image from 'next/image'
 
-const HomePage = () => {
-  const [showContact, setShowContact] = useState(false)
-  const [filters, setFilters] = useState({
-    model: '',
-    yearRange: [2015, 2025] as [number, number],
-    priceRange: [0, 150000] as [number, number],
-    mileageRange: [0, 300000] as [number, number]
-  })
-  const [sortBy, setSortBy] = useState('price-low')
-  const [searchTerm, setSearchTerm] = useState('')
-
-  // Get Tesla data from shared source
-  const teslas = useMemo(() => getBasicTeslas(), [])
-
-  const filteredAndSortedTeslas = useMemo(() => {
-    const filtered = teslas.filter(tesla => {
-      const matchesModel = !filters.model || tesla.model.toLowerCase().includes(filters.model.toLowerCase())
-      const matchesYear = tesla.year >= filters.yearRange[0] && tesla.year <= filters.yearRange[1]
-      const matchesPrice = tesla.price >= filters.priceRange[0] && tesla.price <= filters.priceRange[1]
-      const matchesMileage = tesla.mileage >= filters.mileageRange[0] && tesla.mileage <= filters.mileageRange[1]
-      const matchesSearch = !searchTerm || tesla.model.toLowerCase().includes(searchTerm.toLowerCase())
-      
-      return matchesModel && matchesYear && matchesPrice && matchesMileage && matchesSearch
-    })
-
-    // Sort
-    filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'price-low':
-          return a.price - b.price
-        case 'price-high':
-          return b.price - a.price
-        case 'year-new':
-          return b.year - a.year
-        case 'year-old':
-          return a.year - b.year
-        case 'mileage-low':
-          return a.mileage - b.mileage
-        case 'mileage-high':
-          return b.mileage - a.mileage
-        default:
-          return 0
-      }
-    })
-
-    return filtered
-  }, [teslas, filters, sortBy, searchTerm])
+export default function Home() {
+  const featuredCars = allTeslas.slice(0, 3)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-      {/* Header */}
-      <Header onContactClick={() => setShowContact(true)} />
-
-      {/* Main Content */}
-      <main className="pt-16">
-        {/* Hero Section */}
-        <section className="relative py-16 px-4 overflow-hidden">
-          {/* Background Grid */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
-                               linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)`,
-              backgroundSize: '50px 50px'
-            }}></div>
-          </div>
-
-          <div className="relative max-w-7xl mx-auto text-center">
-            <div className="flex items-center justify-center space-x-3 mb-6">
-              <Zap className="w-12 h-12 text-cyan-400" />
-              <h1 className="text-5xl md:text-7xl font-cyber font-black text-white">
-                Tesla <span className="text-transparent bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text">Unleashed</span>
-              </h1>
-            </div>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Discover premium pre-owned Tesla vehicles in Kamloops, BC. 
-              From Model S to Model Y, find your perfect electric vehicle with full service support.
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Tesla</span> Vehicles
+            </h1>
+            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+              Kamloops&apos; trusted source for pre-owned Tesla vehicles. Quality inspected, competitively priced, with full service and parts support.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <span className="px-4 py-2 bg-cyan-500/10 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium">
-                🔋 All Battery Health Certified
-              </span>
-              <span className="px-4 py-2 bg-cyan-500/10 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium">
-                🚚 Canada-Wide Delivery
-              </span>
-              <span className="px-4 py-2 bg-cyan-500/10 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium">
-                ⚡ Service & Parts Available
-              </span>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link 
+                href="/cars"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold rounded-full transition-all flex items-center space-x-2"
+              >
+                <span>View Inventory</span>
+                <ChevronRight className="w-5 h-5" />
+              </Link>
+              <a 
+                href="tel:2508288761"
+                className="px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-full transition-all flex items-center space-x-2"
+              >
+                <Phone className="w-5 h-5" />
+                <span>Call 250-828-8761</span>
+              </a>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Inventory Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-          {/* Filter Bar */}
-          <FilterBar
-            searchTerm={searchTerm}
-            setSearchTerm={setSearchTerm}
-            sortBy={sortBy}
-            setSortBy={setSortBy}
-            filters={filters}
-            setFilters={setFilters}
-            totalCount={teslas.length}
-            filteredCount={filteredAndSortedTeslas.length}
-          />
-
-          {/* Tesla Grid */}
-          {filteredAndSortedTeslas.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filteredAndSortedTeslas.map((tesla) => (
-                <TeslaCard
-                  key={tesla.id}
-                  tesla={tesla}
-                  onContactClick={() => setShowContact(true)}
-                />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-16">
-              <div className="bg-gray-900/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 max-w-md mx-auto">
-                <Star className="w-16 h-16 text-gray-500 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">No Tesla Found</h3>
-                <p className="text-gray-400 mb-6">
-                  No vehicles match your current filters. Try adjusting your search criteria.
-                </p>
-                <button
-                  onClick={() => {
-                    setFilters({
-                      model: '',
-                      yearRange: [2015, 2025],
-                      priceRange: [0, 150000],
-                      mileageRange: [0, 300000]
-                    })
-                    setSearchTerm('')
-                  }}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-black font-bold px-6 py-3 rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300"
-                >
-                  Clear All Filters
-                </button>
+      {/* Features Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-cyan-400" />
               </div>
+              <h3 className="text-xl font-bold text-white mb-2">Quality Inspected</h3>
+              <p className="text-gray-400">Every vehicle undergoes rigorous inspection and comes with a detailed history report.</p>
             </div>
-          )}
-        </section>
-      </main>
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Wrench className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Full Service Center</h3>
+              <p className="text-gray-400">Expert Tesla service, repairs, and maintenance by certified technicians.</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Truck className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Canada-Wide Delivery</h3>
+              <p className="text-gray-400">We deliver vehicles across Canada. Ask about our transportation options.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* Footer */}
+      {/* Featured Vehicles */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex justify-between items-end mb-8">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-2">Featured Vehicles</h2>
+              <p className="text-gray-400">Hand-picked premium Tesla vehicles</p>
+            </div>
+            <Link href="/cars" className="hidden sm:flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
+              <span>View All</span>
+              <ChevronRight className="w-5 h-5" />
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredCars.map((car) => (
+              <Link key={car.id} href={`/cars/${car.id}`} className="group">
+                <div className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-cyan-500 transition-all hover:shadow-xl hover:shadow-cyan-500/10">
+                  <div className="relative h-48">
+                    <Image
+                      src={car.image}
+                      alt={`${car.year} Tesla ${car.model}`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                        car.condition === 'Excellent' ? 'bg-green-500 text-white' :
+                        car.condition === 'Very Good' ? 'bg-blue-500 text-white' :
+                        'bg-yellow-500 text-black'
+                      }`}>
+                        {car.condition}
+                      </span>
+                    </div>
+                    <div className="absolute top-4 right-4">
+                      <span className="px-3 py-1 bg-black/80 text-cyan-400 font-bold rounded-lg">
+                        ${car.price.toLocaleString()}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
+                      {car.year} Tesla {car.model}
+                    </h3>
+                    <div className="flex items-center space-x-4 mt-2 text-sm text-gray-400">
+                      <span>{car.mileage.toLocaleString()} km</span>
+                      <span>{car.range} km range</span>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {car.features.slice(0, 3).map((feature, idx) => (
+                        <span key={idx} className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          
+          <div className="mt-8 text-center sm:hidden">
+            <Link href="/cars" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
+              <span>View All Vehicles</span>
+              <ChevronRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Services</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              From sales to service, we&apos;re your complete Tesla solution in Kamloops
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link href="/cars" className="group">
+              <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500 transition-all text-center">
+                <Zap className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-lg font-bold text-white mb-2">Vehicle Sales</h3>
+                <p className="text-gray-400 text-sm">Quality pre-owned Tesla vehicles with warranty options</p>
+              </div>
+            </Link>
+            <Link href="/parts" className="group">
+              <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500 transition-all text-center">
+                <Battery className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-lg font-bold text-white mb-2">Parts & Accessories</h3>
+                <p className="text-gray-400 text-sm">Genuine Tesla parts and aftermarket accessories</p>
+              </div>
+            </Link>
+            <Link href="/services" className="group">
+              <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500 transition-all text-center">
+                <Wrench className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-lg font-bold text-white mb-2">Service & Repairs</h3>
+                <p className="text-gray-400 text-sm">Expert maintenance and repair services</p>
+              </div>
+            </Link>
+            <Link href="/contact" className="group">
+              <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500 transition-all text-center">
+                <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-lg font-bold text-white mb-2">Get in Touch</h3>
+                <p className="text-gray-400 text-sm">Questions? We&apos;re here to help</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Go Electric?</h2>
+          <p className="text-gray-400 mb-8">
+            Visit our showroom in Kamloops or give us a call. Let us help you find the perfect Tesla.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link 
+              href="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold rounded-full transition-all"
+            >
+              Schedule a Test Drive
+            </Link>
+            <a 
+              href="tel:2508288761"
+              className="px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-full transition-all"
+            >
+              Call 250-828-8761
+            </a>
+          </div>
+        </div>
+      </section>
+
       <Footer />
-
-      {/* Contact Modal */}
-      <ContactModal 
-        isOpen={showContact} 
-        onClose={() => setShowContact(false)} 
-      />
     </div>
   )
 }
-
-export default HomePage

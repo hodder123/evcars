@@ -42,7 +42,7 @@ const TeslaCard: React.FC<TeslaCardProps> = ({ tesla, onContactClick }) => {
   }
 
   return (
-    <div className="group bg-gray-900/30 backdrop-blur-sm border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-[1.02]">
+    <div className="group relative bg-gray-800 border border-gray-600 rounded-xl overflow-hidden shadow-lg hover:border-cyan-400 transition-all duration-300 hover:shadow-cyan-500/20 hover:shadow-xl">
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
         <Link href={`/${tesla.id}`}>
@@ -58,14 +58,14 @@ const TeslaCard: React.FC<TeslaCardProps> = ({ tesla, onContactClick }) => {
         {/* Badges */}
         <div className="absolute top-3 left-3 flex flex-col space-y-1">
           <span className={`px-2 py-1 rounded-full text-xs font-bold ${
-            tesla.condition === 'Excellent' ? 'bg-green-500/90 text-white' :
-            tesla.condition === 'Very Good' ? 'bg-blue-500/90 text-white' :
-            'bg-yellow-500/90 text-black'
+            tesla.condition === 'Excellent' ? 'bg-green-500 text-white' :
+            tesla.condition === 'Very Good' ? 'bg-blue-500 text-white' :
+            'bg-yellow-500 text-black'
           }`}>
             {tesla.condition}
           </span>
           {tesla.autopilot && (
-            <span className="px-2 py-1 bg-purple-500/90 text-white rounded-full text-xs font-bold">
+            <span className="px-2 py-1 bg-purple-600 text-white rounded-full text-xs font-bold">
               Autopilot
             </span>
           )}
@@ -73,7 +73,7 @@ const TeslaCard: React.FC<TeslaCardProps> = ({ tesla, onContactClick }) => {
 
         {/* Price Badge */}
         <div className="absolute top-3 right-3">
-          <span className="px-3 py-1.5 bg-black/80 backdrop-blur-sm text-cyan-400 font-bold text-lg rounded-lg border border-cyan-400/30">
+          <span className="px-3 py-1.5 bg-black/80 text-cyan-400 font-bold text-lg rounded-lg border border-cyan-400/30">
             {formatPrice(tesla.price)}
           </span>
         </div>
@@ -83,7 +83,7 @@ const TeslaCard: React.FC<TeslaCardProps> = ({ tesla, onContactClick }) => {
       <div className="p-4">
         {/* Title */}
         <Link href={`/${tesla.id}`}>
-          <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors mb-2 line-clamp-1">
+          <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors mb-2 truncate">
             {tesla.year} Tesla {tesla.model}
           </h3>
         </Link>
@@ -91,19 +91,19 @@ const TeslaCard: React.FC<TeslaCardProps> = ({ tesla, onContactClick }) => {
         {/* Key Stats */}
         <div className="grid grid-cols-2 gap-2 mb-3 text-sm">
           <div className="flex items-center space-x-1 text-gray-400">
-            <Gauge className="w-3.5 h-3.5" />
-            <span>{formatMileage(tesla.mileage)} km</span>
+            <Gauge className="w-3.5 h-3.5 flex-shrink-0" />
+            <span className="truncate">{formatMileage(tesla.mileage)} km</span>
           </div>
           <div className="flex items-center space-x-1 text-gray-400">
-            <Battery className="w-3.5 h-3.5" />
+            <Battery className="w-3.5 h-3.5 flex-shrink-0" />
             <span>{tesla.range} km</span>
           </div>
           <div className="flex items-center space-x-1 text-gray-400">
-            <Zap className="w-3.5 h-3.5" />
-            <span>0-100: {tesla.acceleration}</span>
+            <Zap className="w-3.5 h-3.5 flex-shrink-0" />
+            <span>{tesla.acceleration}s</span>
           </div>
           <div className="flex items-center space-x-1 text-gray-400">
-            <Users className="w-3.5 h-3.5" />
+            <Users className="w-3.5 h-3.5 flex-shrink-0" />
             <span>{tesla.seats} seats</span>
           </div>
         </div>
@@ -121,7 +121,7 @@ const TeslaCard: React.FC<TeslaCardProps> = ({ tesla, onContactClick }) => {
             </span>
           ))}
           {tesla.features.length > 2 && (
-            <span className="px-2 py-1 bg-gray-600/20 text-gray-400 rounded text-xs">
+            <span className="px-2 py-1 bg-gray-700 text-gray-400 rounded text-xs">
               +{tesla.features.length - 2} more
             </span>
           )}
@@ -131,7 +131,7 @@ const TeslaCard: React.FC<TeslaCardProps> = ({ tesla, onContactClick }) => {
         <div className="flex space-x-2">
           <Link 
             href={`/${tesla.id}`}
-            className="flex-1 bg-gray-700/50 hover:bg-gray-600/50 text-white text-center py-2 px-3 rounded-lg transition-colors text-sm font-medium"
+            className="flex-1 bg-gray-700 hover:bg-gray-600 text-white text-center py-2 px-3 rounded-lg transition-colors text-sm font-medium"
           >
             View Details
           </Link>
