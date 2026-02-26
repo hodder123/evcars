@@ -91,7 +91,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
               Call Now
             </a>
             <a 
-              href="mailto:info@evstore.ca" 
+              href="mailto:theevstore.ca@gmail.com" 
               className="flex-1 bg-gray-700/50 hover:bg-gray-600/50 text-white font-bold py-3 px-4 rounded-lg transition-colors text-center"
             >
               Email Us
