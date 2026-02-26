@@ -22,7 +22,7 @@ export const allTeslas: DetailedTesla[] = [
     id: 1,
     model: "Model S Plaid",
     year: 2023,
-    price: 89900,
+    price: 80000,
     mileage: 8500,
     battery: "100 kWh",
     range: 628,
