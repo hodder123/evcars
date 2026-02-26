@@ -30,9 +30,9 @@ export default function CarsPage() {
           </div>
 
           {/* Vehicles Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" style={{ display: 'grid', visibility: 'visible' }}>
             {allTeslas.map((car) => (
-              <div key={car.id} className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-cyan-500 transition-all hover:shadow-xl hover:shadow-cyan-500/10">
+              <div key={car.id} className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-cyan-500 transition-all hover:shadow-xl hover:shadow-cyan-500/10" style={{ backgroundColor: '#1f2937', visibility: 'visible' }}>
                 {/* Image */}
                 <Link href={`/cars/${car.id}`}>
                   <div className="relative h-56">

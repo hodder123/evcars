@@ -85,16 +85,17 @@ export default function Home() {
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" style={{ display: 'grid', visibility: 'visible' }}>
             {featuredCars.map((car) => (
-              <Link key={car.id} href={`/cars/${car.id}`} className="group">
-                <div className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-cyan-500 transition-all hover:shadow-xl hover:shadow-cyan-500/10">
-                  <div className="relative h-48">
+              <Link key={car.id} href={`/cars/${car.id}`} className="group block" style={{ display: 'block', visibility: 'visible' }}>
+                <div className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-cyan-500 transition-all hover:shadow-xl hover:shadow-cyan-500/10" style={{ backgroundColor: '#1f2937', visibility: 'visible' }}>
+                  <div className="relative h-48" style={{ height: '192px', position: 'relative', overflow: 'hidden' }}>
                     <Image
                       src={car.image}
                       alt={`${car.year} Tesla ${car.model}`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                     />
                     <div className="absolute top-4 left-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-bold ${
