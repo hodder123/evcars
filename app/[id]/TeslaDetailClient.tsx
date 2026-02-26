@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { useParams, useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from '../components/Header'
@@ -10,13 +10,16 @@ import ContactModal from '../components/ContactModal'
 import { ArrowLeft, Gauge, Battery, Zap, Star, Phone, CheckCircle, AlertCircle } from 'lucide-react'
 import { getTeslaById } from '../lib/teslaData'
 
-const TeslaDetailPage = () => {
-  const params = useParams()
+interface TeslaDetailClientProps {
+  id: string
+}
+
+const TeslaDetailClient = ({ id }: TeslaDetailClientProps) => {
   const router = useRouter()
   const [showContact, setShowContact] = useState(false)
   const [selectedImage, setSelectedImage] = useState(0)
 
-  const tesla = getTeslaById(params.id as string)
+  const tesla = getTeslaById(id)
 
   if (!tesla) {
     return (
@@ -265,4 +268,4 @@ const TeslaDetailPage = () => {
   )
 }
 
-export default TeslaDetailPage
+export default TeslaDetailClient
