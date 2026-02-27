@@ -647,5 +647,66 @@ Contact us at (250) 828-8761 or stop by to find your perfect Tesla today.`,
     image: '/images/blog/model-3-vs-y.jpg',
     metaTitle: 'Tesla Model 3 vs Model Y Kamloops | Which EV is Right for You?',
     metaDescription: 'Compare Tesla Model 3 and Model Y for Kamloops driving. Learn about range, space, winter performance, and find the perfect Tesla for your lifestyle.'
+  },
+  {
+    slug: 'ev-tax-incentives-canada-2026',
+    title: 'Understanding EV Tax Incentives and Rebates in Canada (2026)',
+    excerpt: 'Maximize your savings with federal and provincial EV rebates. Learn how to stack incentives and save up to $15,000 on your electric vehicle purchase in BC.',
+    content: `## Understanding EV Tax Incentives and Rebates in Canada (2026)
+
+Thinking about making the switch to electric? There's never been a better time. Canada offers several federal and provincial incentives that can significantly reduce the upfront cost of your EV purchase.
+
+### Federal iZEV Program
+
+The Incentives for Zero-Emission Vehicles (iZEV) program offers up to **$5,000 off** the purchase or lease of a qualifying battery electric vehicle (BEV) or long-range plug-in hybrid (PHEV).
+
+**Key details:**
+- Purchase price must be below $60,000 (MSRP)
+- Vehicle must be new and registered in Canada
+- Applies to both personal and business use
+- Dealers apply the incentive at point of sale
+
+### British Columbia Provincial Rebates
+
+BC residents can stack provincial incentives on top of federal ones:
+
+- **CleanBC Go Electric rebate**: Up to $4,000 for new EVs
+- **Scrap-It program**: Up to $6,000 when you scrap an old gas vehicle
+- **Used EV rebate**: Up to $2,000 for qualifying used EVs
+
+**Combined savings potential**: Up to $15,000 off your EV!
+
+### Business Tax Benefits
+
+If you're purchasing for business use, additional advantages include:
+- Accelerated Capital Cost Allowance (CCA) – write off up to 100% in the first year
+- GST/HST input tax credits on operating costs
+- Reduced taxable benefit for company car usage
+
+### Charging Infrastructure Credits
+
+Don't forget about home charging:
+- **EV charger rebates**: Up to $350 for Level 2 home charger installation
+- **Federal tax credit**: 15% of installation costs (up to $500)
+
+### Maximizing Your Savings
+
+**Tips to get the most value:**
+1. Stack federal + provincial rebates when possible
+2. Consider a qualifying used EV for lower upfront costs
+3. Time your purchase around program deadlines
+4. Keep documentation for tax filing
+
+### The Bottom Line
+
+Between incentives, lower fuel costs (about 1/5th of gas), reduced maintenance, and environmental benefits, EVs are increasingly the smart financial choice for Canadian drivers.`,
+    author: 'The EV Store Team',
+    date: '2026-02-27',
+    readTime: 7,
+    category: 'Buying Guide',
+    tags: ['EV rebates', 'tax incentives', 'Canada', 'British Columbia', 'iZEV', 'CleanBC', 'EV savings'],
+    image: '/images/blog/ev-tax-incentives.jpg',
+    metaTitle: 'EV Tax Incentives Canada 2026 | Save Up to $15,000 on Electric Vehicles',
+    metaDescription: 'Complete guide to EV rebates in Canada. Federal iZEV, BC CleanBC rebates, and business tax benefits. Learn how to save up to $15,000 on your EV purchase.'
   }
 ]
