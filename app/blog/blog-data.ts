@@ -2,6 +2,64 @@ import { BlogPost } from './blog-types'
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: '5-things-to-know-before-buying-used-tesla-kamloops',
+    title: '5 Things to Know Before Buying a Used Tesla in Kamloops',
+    excerpt: 'Thinking about buying a used Tesla in Kamloops? Here are 5 essential things every buyer should know before making the investment.',
+    content: `## 5 Things to Know Before Buying a Used Tesla in Kamloops
+
+Thinking about joining the electric revolution with a used Tesla? You're not alone. With gas prices fluctuating and environmental concerns growing, more Kamloops drivers are making the switch to electric vehicles. But before you hand over your hard-earned money, here are five crucial things every used Tesla buyer should know.
+
+### 1. Battery Health is Everything
+
+The battery is the heart of any electric vehicle, and Tesla's are no exception. When shopping for a used Tesla, pay close attention to the battery's state of health. A Model 3 or Model Y with 90%+ battery capacity is ideal. Don't just trust the range estimate on the dash—use third-party apps like TeslaFi or Scan My Tesla to get detailed battery data.
+
+**Red flag:** If the seller won't let you check battery health or the range seems significantly lower than advertised for the mileage, walk away.
+
+### 2. Understand the Warranty Situation
+
+Tesla's warranty coverage varies by model year and component:
+
+- **Battery & Drive Unit:** 8 years or 192,000 km (varies by model)
+- **Vehicle:** 4 years or 80,000 km (Basic Vehicle Limited Warranty)
+
+Ask for the VIN and verify remaining warranty coverage directly with Tesla. Some earlier Model S and X vehicles may have had their warranties extended due to known issues—worth checking.
+
+### 3. Check for Accident History and Repairs
+
+Like any used car, a clean history report is essential. But with Teslas, there's an extra layer: aluminum body panels and specialized repair requirements. Only Tesla-certified shops can perform certain repairs, and they don't come cheap.
+
+Request a Carfax report and specifically ask about any bodywork. Minor fender benders are usually fine, but structural damage or airbag deployment should make you think twice.
+
+### 4. Charging Infrastructure in Kamloops
+
+Living in Kamloops means you're well-positioned for EV ownership. The city has a growing network of public chargers, and destinations like Vancouver, Kelowna, and the Okanagan are easily reachable with Tesla's Supercharger network.
+
+However, consider your home charging situation. A standard 120V outlet will add about 8 km of range per hour—fine for overnight charging if your daily commute is short. For faster home charging, a 240V outlet (like your dryer uses) will give you 30-50 km per hour.
+
+### 5. Software and Features Transfer
+
+One of Tesla's unique selling points is its over-the-air software updates. However, some features don't transfer with the vehicle:
+
+- **Full Self-Driving (FSD):** This $15,000+ package stays with the original purchaser unless specifically transferred by Tesla
+- **Premium Connectivity:** The free trial ends, and you'll need to subscribe ($13.99/month CAD) for live traffic, satellite maps, and streaming
+
+Verify what's included and budget for ongoing subscription costs if you want the full Tesla experience.
+
+### Final Thoughts
+
+Buying a used Tesla can be a smart financial move—you avoid the steep depreciation of a new vehicle while still getting cutting-edge technology. Just do your homework, verify everything, and don't rush the process.
+
+At The EV Store, we specialize in quality used Teslas right here in Kamloops. Every vehicle in our inventory undergoes a comprehensive inspection, and we provide full transparency on battery health, warranty status, and vehicle history.`,
+    author: 'The EV Store Team',
+    date: '2025-02-27',
+    readTime: 6,
+    category: 'Buying Guide',
+    tags: ['tesla', 'buying guide', 'kamloops', 'used ev', 'electric vehicles'],
+    image: '/images/blog/used-tesla-kamloops.jpg',
+    metaTitle: '5 Things to Know Before Buying a Used Tesla in Kamloops | The EV Store',
+    metaDescription: 'Thinking about buying a used Tesla in Kamloops? Here are 5 essential things every buyer should know before making the investment.'
+  },
+  {
     slug: 'used-tesla-buying-guide-kamloops',
     title: 'Complete Guide to Buying a Used Tesla in Kamloops',
     excerpt: 'Everything you need to know before purchasing a pre-owned Tesla. Learn about battery health, warranty transfer, and what to look for when buying used.',
