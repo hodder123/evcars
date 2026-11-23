@@ -42,7 +42,7 @@ export const allTeslas: Tesla[] = [
     image: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=500&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=800&h=500&fit=crop',
+      'https://images.unsplash.com/photo-1676754568744-7852efc67c40?w=800&h=500&fit=crop',
       'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=500&fit=crop'
     ],
     description: 'The ultimate Tesla sedan with tri-motor setup and incredible performance. This vehicle represents the pinnacle of electric vehicle technology with mind-bending acceleration and luxury appointments throughout.',
@@ -74,8 +74,8 @@ export const allTeslas: Tesla[] = [
     image: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=500&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=500&fit=crop'
+      'https://images.unsplash.com/photo-1771289083523-35928b27b03e?w=800&h=500&fit=crop',
+      'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=500&fit=crop'
     ],
     description: 'Track-ready performance sedan with dual motor all-wheel drive. This vehicle offers exceptional handling and acceleration with track mode capabilities.',
     features: ['Dual-Motor AWD', 'Track Mode', 'Performance Brakes', '20" Wheels', 'Premium Audio', 'Heated Seats', 'Glass Roof', 'Autopilot', 'Navigation', 'Bluetooth'],
@@ -103,11 +103,11 @@ export const allTeslas: Tesla[] = [
     acceleration: '4.8s',
     seats: 7,
     autopilot: true,
-    image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1676754568744-7852efc67c40?w=800&h=500&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&h=500&fit=crop'
+      'https://images.unsplash.com/photo-1676754568744-7852efc67c40?w=800&h=500&fit=crop',
+      'https://images.unsplash.com/photo-1771289083523-35928b27b03e?w=800&h=500&fit=crop',
+      'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=500&fit=crop'
     ],
     description: 'Versatile SUV with 7-seat configuration and impressive range. Perfect family vehicle with cutting-edge technology.',
     features: ['Dual-Motor AWD', '7-Seat Interior', 'Autopilot', '19" Wheels', 'Premium Audio', 'Heated Seats', 'Panoramic Glass Roof', 'Navigation', 'Bluetooth', 'Power Liftgate'],
@@ -135,11 +135,11 @@ export const allTeslas: Tesla[] = [
     acceleration: '2.5s',
     seats: 7,
     autopilot: true,
-    image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1676754568744-7852efc67c40?w=800&h=500&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=500&fit=crop'
+      'https://images.unsplash.com/photo-1676754568744-7852efc67c40?w=800&h=500&fit=crop',
+      'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=500&fit=crop',
+      'https://images.unsplash.com/photo-1771289083523-35928b27b03e?w=800&h=500&fit=crop'
     ],
     description: 'Luxury SUV with falcon wing doors and tri-motor performance. The ultimate in Tesla luxury and capability.',
     features: ['Tri-Motor AWD', 'Falcon Wing Doors', 'Full Self-Driving', '22" Wheels', 'Premium Audio', 'Heated & Ventilated Seats', 'Panoramic Windshield', 'Autopilot', 'Navigation', 'Bluetooth'],
@@ -167,11 +167,11 @@ export const allTeslas: Tesla[] = [
     acceleration: '5.8s',
     seats: 5,
     autopilot: false,
-    image: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1771289083523-35928b27b03e?w=800&h=500&fit=crop',
     gallery: [
+      'https://images.unsplash.com/photo-1771289083523-35928b27b03e?w=800&h=500&fit=crop',
       'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=500&fit=crop'
+      'https://images.unsplash.com/photo-1676754568744-7852efc67c40?w=800&h=500&fit=crop'
     ],
     description: 'Entry-level Tesla with excellent efficiency and modern features. Perfect introduction to electric driving.',
     features: ['RWD', 'Standard Autopilot', '18" Wheels', 'Premium Audio', 'Heated Seats', 'Glass Roof', 'Navigation', 'Bluetooth', 'Backup Camera'],
