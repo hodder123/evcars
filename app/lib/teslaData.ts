@@ -39,12 +39,8 @@ export const allTeslas: Tesla[] = [
     acceleration: '1.99s',
     seats: 5,
     autopilot: true,
-    image: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=500&fit=crop',
-    gallery: [
-      'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1676754568744-7852efc67c40?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=500&fit=crop'
-    ],
+    image: '',
+    gallery: [],
     description: 'The ultimate Tesla sedan with tri-motor setup and incredible performance. This vehicle represents the pinnacle of electric vehicle technology with mind-bending acceleration and luxury appointments throughout.',
     features: ['Tri-Motor AWD', 'Full Self-Driving', 'Carbon Fiber Interior', '21" Wheels', 'Premium Audio', 'Heated Seats', 'Glass Roof', 'Autopilot', 'Navigation', 'Bluetooth'],
     condition: 'Excellent',
@@ -71,12 +67,8 @@ export const allTeslas: Tesla[] = [
     acceleration: '3.1s',
     seats: 5,
     autopilot: true,
-    image: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=500&fit=crop',
-    gallery: [
-      'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1771289083523-35928b27b03e?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=500&fit=crop'
-    ],
+    image: '',
+    gallery: [],
     description: 'Track-ready performance sedan with dual motor all-wheel drive. This vehicle offers exceptional handling and acceleration with track mode capabilities.',
     features: ['Dual-Motor AWD', 'Track Mode', 'Performance Brakes', '20" Wheels', 'Premium Audio', 'Heated Seats', 'Glass Roof', 'Autopilot', 'Navigation', 'Bluetooth'],
     condition: 'Excellent',
@@ -103,12 +95,8 @@ export const allTeslas: Tesla[] = [
     acceleration: '4.8s',
     seats: 7,
     autopilot: true,
-    image: 'https://images.unsplash.com/photo-1676754568744-7852efc67c40?w=800&h=500&fit=crop',
-    gallery: [
-      'https://images.unsplash.com/photo-1676754568744-7852efc67c40?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1771289083523-35928b27b03e?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=500&fit=crop'
-    ],
+    image: '',
+    gallery: [],
     description: 'Versatile SUV with 7-seat configuration and impressive range. Perfect family vehicle with cutting-edge technology.',
     features: ['Dual-Motor AWD', '7-Seat Interior', 'Autopilot', '19" Wheels', 'Premium Audio', 'Heated Seats', 'Panoramic Glass Roof', 'Navigation', 'Bluetooth', 'Power Liftgate'],
     condition: 'Excellent',
@@ -135,12 +123,8 @@ export const allTeslas: Tesla[] = [
     acceleration: '2.5s',
     seats: 7,
     autopilot: true,
-    image: 'https://images.unsplash.com/photo-1676754568744-7852efc67c40?w=800&h=500&fit=crop',
-    gallery: [
-      'https://images.unsplash.com/photo-1676754568744-7852efc67c40?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1771289083523-35928b27b03e?w=800&h=500&fit=crop'
-    ],
+    image: '',
+    gallery: [],
     description: 'Luxury SUV with falcon wing doors and tri-motor performance. The ultimate in Tesla luxury and capability.',
     features: ['Tri-Motor AWD', 'Falcon Wing Doors', 'Full Self-Driving', '22" Wheels', 'Premium Audio', 'Heated & Ventilated Seats', 'Panoramic Windshield', 'Autopilot', 'Navigation', 'Bluetooth'],
     condition: 'Very Good',
@@ -167,12 +151,8 @@ export const allTeslas: Tesla[] = [
     acceleration: '5.8s',
     seats: 5,
     autopilot: false,
-    image: 'https://images.unsplash.com/photo-1771289083523-35928b27b03e?w=800&h=500&fit=crop',
-    gallery: [
-      'https://images.unsplash.com/photo-1771289083523-35928b27b03e?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1676754568744-7852efc67c40?w=800&h=500&fit=crop'
-    ],
+    image: '',
+    gallery: [],
     description: 'Entry-level Tesla with excellent efficiency and modern features. Perfect introduction to electric driving.',
     features: ['RWD', 'Standard Autopilot', '18" Wheels', 'Premium Audio', 'Heated Seats', 'Glass Roof', 'Navigation', 'Bluetooth', 'Backup Camera'],
     condition: 'Good',

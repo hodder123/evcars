@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import { getTeslaById, allTeslas } from '../../lib/teslaData'
-import Image from 'next/image'
+import CarImage from '../../components/CarImage'
 import { Phone, Mail, Gauge, Battery, Zap, Users, CheckCircle, ArrowLeft } from 'lucide-react'
 
 interface PageProps {
@@ -42,23 +42,16 @@ export default function CarDetailPage({ params }: PageProps) {
             {/* Image Gallery */}
             <div>
               <div className="relative h-96 rounded-xl overflow-hidden">
-                <Image
+                <CarImage
                   src={car.image}
                   alt={`${car.year} Tesla ${car.model}`}
-                  fill
-                  className="object-cover"
                   priority
                 />
               </div>
               <div className="grid grid-cols-3 gap-2 mt-2">
                 {car.gallery.map((img, idx) => (
                   <div key={idx} className="relative h-24 rounded-lg overflow-hidden">
-                    <Image
-                      src={img}
-                      alt={`View ${idx + 1}`}
-                      fill
-                      className="object-cover"
-                    />
+                    <CarImage src={img} alt={`View ${idx + 1}`} />
                   </div>
                 ))}
               </div>

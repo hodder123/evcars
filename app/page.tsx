@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import { Zap, Battery, Wrench, Phone, ChevronRight, Shield, Truck } from 'lucide-react'
 import { allTeslas } from './lib/teslaData'
-import Image from 'next/image'
+import CarImage from './components/CarImage'
 
 export default function Home() {
   const featuredCars = allTeslas.slice(0, 3)
@@ -90,11 +90,10 @@ export default function Home() {
               <Link key={car.id} href={`/cars/${car.id}`} className="group">
                 <div className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-cyan-500 transition-all hover:shadow-xl hover:shadow-cyan-500/10">
                   <div className="relative h-48">
-                    <Image
+                    <CarImage
                       src={car.image}
                       alt={`${car.year} Tesla ${car.model}`}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-bold ${

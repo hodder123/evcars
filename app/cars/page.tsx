@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { allTeslas } from '../lib/teslaData'
-import Image from 'next/image'
+import CarImage from '../components/CarImage'
 import { Phone, Gauge, Battery, Zap, Users } from 'lucide-react'
 
 export default function CarsPage() {
@@ -49,11 +49,10 @@ export default function CarsPage() {
                 {/* Image */}
                 <Link href={`/cars/${car.id}`}>
                   <div className="relative h-56">
-                    <Image
+                    <CarImage
                       src={car.image}
                       alt={`${car.year} Tesla ${car.model}`}
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      className="hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-bold ${
