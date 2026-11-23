@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next/server";
+import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const b = "https://evcars-hodder123s-projects.vercel.app";
   return [
