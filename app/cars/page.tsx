@@ -22,6 +22,19 @@ export default function CarsPage() {
             </p>
           </div>
 
+          {/* Availability notice */}
+          <div className="mb-8 p-5 bg-cyan-500/10 border border-cyan-400/30 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <p className="text-gray-300">
+              Our inventory changes often. Contact us to see what&apos;s available right now, or to find a specific Tesla.
+            </p>
+            <Link
+              href="/contact"
+              className="px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-black font-bold rounded-full text-center whitespace-nowrap"
+            >
+              Ask About Availability
+            </Link>
+          </div>
+
           {/* Vehicle Count */}
           <div className="mb-8">
             <p className="text-gray-400">

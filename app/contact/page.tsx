@@ -1,6 +1,7 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
+import ContactForm from '../components/ContactForm'
+import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 
 export default function ContactPage() {
   return (
@@ -75,61 +76,7 @@ export default function ContactPage() {
             <div className="bg-gray-800 p-8 rounded-xl border border-gray-700">
               <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
               
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-gray-300 text-sm font-medium mb-2">First Name</label>
-                    <input 
-                      type="text" 
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-                      placeholder="John"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-gray-300 text-sm font-medium mb-2">Last Name</label>
-                    <input 
-                      type="text" 
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-                      placeholder="Doe"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-gray-300 text-sm font-medium mb-2">Email</label>
-                  <input 
-                    type="email" 
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-                    placeholder="john@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-gray-300 text-sm font-medium mb-2">Phone</label>
-                  <input 
-                    type="tel" 
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-                    placeholder="(250) 123-4567"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-gray-300 text-sm font-medium mb-2">Message</label>
-                  <textarea 
-                    rows={4}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-                    placeholder="How can we help you?"
-                  ></textarea>
-                </div>
-
-                <button 
-                  type="submit"
-                  className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold rounded-lg transition-all flex items-center justify-center space-x-2"
-                >
-                  <Send className="w-5 h-5" />
-                  <span>Send Message</span>
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
